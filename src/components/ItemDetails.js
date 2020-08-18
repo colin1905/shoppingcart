@@ -20,8 +20,11 @@ export default class ItemDetails extends Component {
           { this.state.open === false ? ` +` : ` -`} 
           
         </Button>
+   
+       {/* Accordion style thing */}
         <Collapse in={this.state.open}>
           <div>
+            {/* pushes it in */}
             <Well>
               <Media>
                 <Media.Left>
@@ -33,7 +36,7 @@ export default class ItemDetails extends Component {
                   />
                 </Media.Left>
                 <Media.Body>
-                  <p>Essentials by OFM ESS-3085 Racing Style LEather Gaming Chair, Red</p>
+                  <p>Essentials by OFM ESS-3085 Racing Style Leather Gaming Chair, Red</p>
                   <Row className="show-grid">
                     <Col md={6}> <strong> {`$${this.props.price}`}</strong>
                     <br />

@@ -1,5 +1,8 @@
+import './App.css';
+
 import React, { Component } from 'react';
 import { Grid } from 'react-bootstrap';
+import { connect } from 'react-redux';
 
 import Subtotal from './components/Subtotal';
 import PickupSavings from './components/PickupSavings'
@@ -8,9 +11,8 @@ import EstimatedTotal from './components/EstimatedTotal'
 import ItemDetails from './components/ItemDetails'
 import PromoCodeDiscount from './components/PromoCode';
 
-import { connect} from 'react-redux';
-import {handleChange } from './actions/promoCodeActions';
-import './App.css';
+
+import { handleChange } from './actions/promoCodeActions';
 
 
 class App extends Component {
@@ -26,7 +28,7 @@ class App extends Component {
     }
   }
 
-  componentDidMount =() => {
+  componentDidMount = () => {
     this.setState({
       taxes: (this.state.total + this.state.PickupSavings) * 0.0875
     },

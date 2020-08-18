@@ -15,6 +15,7 @@ class PromoCodeDiscount extends Component {
   handleChange = e => {
     this.props.handleChange(e);
   }
+  
   render() {
     return(
       <div>

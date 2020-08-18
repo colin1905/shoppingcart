@@ -7,6 +7,8 @@ import store from './store';
 
 
 ReactDOM.render(
+  //wrap App in Provider, which makes the Redux store available  to nested components
+  //that have been wrapped in the connect() function
   <Provider store={store}>
     <App />
   </Provider>, 
